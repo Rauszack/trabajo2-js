@@ -8,6 +8,7 @@ let nuevoElemento = document.createElement("p")
 nuevoElemento.innerHTML = "Solo puede ver la magia aquel que en ella cree"
 document.body.appendChild(nuevoElemento)
 
+const URL = 'js/productos.json'
 
 document.addEventListener("DOMContentLoaded", function() {
   const productoLista = document.getElementById("producto-lista");
