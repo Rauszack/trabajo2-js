@@ -20,24 +20,24 @@
         "nombre":"Producto4",
         "precio": "700"
     },{ 
-        "id": "1",
+        "id": "5",
        "imagen": "./imagenes/duende14.jpg",
-        "nombre":"Producto 5",
+        "nombre":"Producto5",
         "precio": "900"
     },{ 
-        "id": "1",
+        "id": "6",
        "imagen": "./imagenes/duende17.jpg",
-        "nombre":"Producto 6",
+        "nombre":"Producto6",
         "precio": "900"
     },{ 
-        "id": "1",
+        "id": "7",
        "imagen": "./imagenes/duende28.jpg",
-        "nombre":"Producto 7",
+        "nombre":"Producto7",
         "precio": "1000"
     },{ 
-        "id": "1",
+        "id": "8",
        "imagen": "./imagenes/grupo3.jpg",
-        "nombre":"Producto 8",
+        "nombre":"Producto8",
         "precio": "1000"
     }
 ]

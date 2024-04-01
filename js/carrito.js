@@ -12,27 +12,39 @@ const URL = 'js/productos.json'
 
 const productos = []
 
+  //  AGREGAR PRODUCTOS
+ 
+// productos
+function retornarCardHTML({ imagen, nombre, precio, id }) {
+        return `<div class="producto">            
+                  <img class="producto__imagen" src="${imagen}" alt="imagen ${nombre}">
+                  <div class="producto__informacion">
+                      <p class="producto__nombre">${nombre}</p>
+                      <p class="producto__precio"><b>$${precio}</b></p>
+                      <button id="${id}" class="button button-add pointer" title="Pulsa para comprar">COMPRAR</button>
+                  </div>
+                  
+              </div>`                
+}
+
 // Después se declaran todas las funciones
-function addToCart(productoId) {
-  let carritoItems = JSON.parse(localStorage.getItem("carrito")) || [];
+function agregarAlCarrito(productoId) {
+  let carritoItems = JSON.parse(localStorage.getItem("miCarrito")) || [];
   const producto = productos.find((p) => p.id === productoId);
   if (producto) {
       carritoItems.push(producto);
-      localStorage.setItem("carrito", JSON.stringify(carritoItems));
+      localStorage.setItem("miCarrito", JSON.stringify(carritoItems));
       mostrarCarrito();
   }
 }
 
 function mostrarCarrito() {
-  const carrito = document.getElementById("carrito");
+  const carrito = document.getElementById("miCarrito");
 
   carrito.innerHTML = "";
-  let carritoItems = JSON.parse(localStorage.getItem("carrito")) || [];
-  if (carritoItems.length === 0) {
-      // "cart" no está definido en ninguna parte del código, lo que genera
-      // un error de cómputo ya que se intenta asignar un párrafo a un elemento
-      // que no existe
-      cart.innerHTML = "<p>El carrito está vacío.</p>";
+  let carritoItems = JSON.parse(localStorage.getItem("miCarrito")) || [];
+  if (carritoItems.length === 0) {    
+      carrito.innerHTML = "<p>El carrito está vacío.</p>";
   } else {
       const ul = document.createElement("ul");
       carritoItems.forEach((item) => {
@@ -50,7 +62,7 @@ const productoLista = document.getElementById("producto-lista");
 productos.forEach((producto) => {
   const li = document.createElement("li");
   li.innerHTML = `
-    ${producto.nombre} - $${producto.precio}
+  ${producto.imagen} - ${producto.nombre} - $${producto.precio}
     <button onclick="addToCart(${producto.id})">Agregar al Carrito</button>
   `;
   productoLista.appendChild(li);
