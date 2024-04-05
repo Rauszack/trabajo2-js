@@ -1,42 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Los duendes del amor</title>
-<link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Duendes del amor</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body> 
+<body>
     <header>
-        <h1 id="titulo">los duendes del amor
-        </h1>
+        <h1>Los Duendes del Amor</h1>
 
-        <nav></div>
-          <h2>Carrito de Compras</h2>
-            <div id="miCarrito"></div>
-            <div id="productos">
-              <h3>Productos</h3>
-              <ul id="producto-lista"></ul>
-              <!-- Botón de compra para un producto -->
-          <button class="buy-btn" data-product-id="1">Comprar</button>
-          
-            </div></nav>
+        <div class="contenedor-carrito"> <!--  contenedor del carrito-->
+              <div class="imgCarro" id="imgCarro">
+                    <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke-width="1.5" 
+                    stroke="currentColor" 
+                    class="icon-cart">
+                <path 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" 
+                    />
+                </svg>
+             <div class="contador-productos">
+                 <span id="contador-productos">0</span>
+             </div>
+        </div>
+          <!--  contenedor del carrito-->
+           <div class="contenedor-carrito-productos ocultar-carrito">
+            <div class="row-productos ocultar">
+                   <div class="carrito-productos">
+                       <div class="informacion-carrito-productos">
+                           <span class="cantidad-producto-carrito">1</span>
+                          <p class="titulo-producto-carrito">Duende con bastón</p>
+                           <span class="precio-producto-carrito">$500</span>  
+                           </div> 
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            fill="none" 
+                            viewBox="0 0 24 24" 
+                            stroke-width="1.5" 
+                            stroke="currentColor" 
+                            class="cerrar-icono">
+                        <path 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            d="M6 18 18 6M6 6l12 12" 
+                        />
+                        </svg>                      
+                    </div>
+            </div>
+             
+                    <div class="carrito-total ocultar">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">$1000</span>
+                    </div>
+                </div>
+           </div>
     </header>
-<main>   
-  <div>
-    <p id="miparrafo1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quia voluptas in amet ipsam provident assumenda accusamus enim tempora labore, ducimus iusto laboriosam nostrum, repellat sapiente nam, dolore fuga vel!</p>
-  </div>
-<h2>Carrito de Compras</h2>
-  <div id="miCarrito"></div>
-  <div id="productos">
-    <h3>Productos</h3>
-    <ul id="producto-lista"></ul>
-    <!-- Botón de compra para un producto -->
-<button class="buy-btn" data-product-id="1">Comprar</button>
-
-  </div>
-</main>
-<script defer src="./js/carrito.js"></script>
-<script defer src="./js/storage.js" ></script>
+    <!--  contenedor de productos-->
+         </div>
+         <div class="contenedor" id="contenedor">
+         </div>
+    </div>
+    <footer>
+        <img src="./imagenes/LogoLDDA.jpg" alt="LogoLDDA">
+    </footer>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/storage.js"></script>
 </body>
 </html>
