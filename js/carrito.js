@@ -199,3 +199,14 @@ const mostrarHTML = () => {
 	valorTotal.innerText = `$${total}`;
 	contadorProductos.innerText = totalDeLosProductos;
 };
+
+
+Toastify({
+
+    text: "agregaste un producto al carrito",
+    
+    duration: 3000
+    
+});
+
+showToast();
