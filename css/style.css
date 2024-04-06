@@ -24,9 +24,8 @@ body{
 }
 
 img{
-    width: 100%;
+    width: 30%;
     height: 100%;
-
 }
 
 header{
@@ -35,13 +34,13 @@ header{
     padding: 30px 0 40px 0;
 }
 
-.container-icon{
+.contenedor-carrito{
     position: relative;
 }
 
-.count-products{
+.contador-productos{
     position: absolute;
-    top: 55%;
+    top: 50%;
     right: 0;
     background-color: #000;
     color: #fff;
@@ -57,11 +56,10 @@ header{
     font-size: 12px;
 }
 
-.container-cart-products{
+.contenedor-carrito-productos{
     position: absolute;
     top: 50px;
     right: 0;
-
     background-color: #fff;
     width: 400px;
     z-index: 1;
@@ -69,7 +67,7 @@ header{
     border-radius: 10px;
 }
 
-.cart-product{
+.carrito-productos{
     display: flex;    
     align-items: center;
     justify-content: space-between;
@@ -77,7 +75,7 @@ header{
     border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 }
 
-.info-cart-product{
+.informacion-carrito-productos{
     display: flex;
     justify-content: space-between;
     flex: 0.8;
@@ -98,17 +96,17 @@ header{
     font-size: 20px;
 }
 
-.icon-close{
+#cerrar-icono{
     width: 25px;
     height: 25px;
 }
 
-.icon-close:hover{
+#cerrar-icono:hover{
     stroke: red;
     cursor: pointer;
 }
 
-.cart-total{
+.carrito-total{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +114,7 @@ header{
     gap: 20px;
 }
 
-.cart-total h3{
+.carrito-total h3{
     font-size: 20px;
     font-weight: 700;
 }
@@ -126,26 +124,25 @@ header{
     font-weight: 900;
 }
 
-.hidden-cart{
+.ocultar-carrito{
     display: none;
 }
 
 .producto{
+    
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 10px;
     column-gap: 10px;
     padding: 5px;
 }
 
+.producto:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
 .item{
     border-radius: 10px;
 }
-
-.producto__imagen:hover{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
-}
-
 
 .item img{
     width: 100%;
@@ -162,7 +159,6 @@ header{
 .item:hover img{
     transform: scale(1.2);
 }
-
 
 .info-product{
     padding: 15px 30px;
@@ -186,7 +182,19 @@ header{
     cursor: pointer;
 }
 
-.cart-empty{
+.ocultar{
+    display: none;
+}
+
+.contenedor{
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.footer{
     text-align: center;
+    margin-top: 20px;
 }

@@ -1,13 +1,13 @@
 function guardarCarrito() {
-   localStorage.setItem("miCarrito", JSON.stringify(carrito))
+   localStorage.setItem("miCarrito", JSON.stringify(todosLosProductos));
 }
 
 function recuperarCarrito() {
-   return JSON.parse(localStorage.getItem("miCarrito",)) || []
+   return JSON.parse(localStorage.getItem("miCarrito")) || [];
 }
 
-function eliminarCarrito() { 
-   localStorage.removeItem("miCarrito") 
+function eliminarCarrito() {
+   localStorage.removeItem("miCarrito");
 }
 
-const carrito = recuperarCarrito()
+const todosLosProductos = recuperarCarrito();
